@@ -1,207 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:roundiv="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bgcolor">
 
+    <!--头开始了-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:background="@color/themeColor">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/content"
-        android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical"
-        android:background="@color/themeColor">
+        android:orientation="horizontal"
+        android:background="#595f80">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <!--头结束了-->
 
+    <!--主体内容开始了-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="vertical">
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#fff"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
-
+            android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+                <!--轮播图片开始了-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/temp"
+                        android:scaleType="centerCrop"/>
+                </LinearLayout>
+                <!--轮播图片结束了-->
 
+                <!--八按钮开始了-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@mipmap/z1"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@mipmap/z2"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@mipmap/z3"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@mipmap/z4"/>
+                </LinearLayout>
+                <!--上下行的分割线-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@mipmap/che"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@mipmap/can"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@mipmap/ying"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@mipmap/you"/>
+                </LinearLayout>
+                <!--八按钮结束了-->
+
+                <!--商品内容开始了-->
+                <!--一行商品开始了-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-
+                    <!--左-->
                     <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="215dp"
-                            android:src="@mipmap/good001"/>
+                        style="@style/GoodLinearLayoutL">
+                        <frontend.shoppingmall.CustomRoundAngleImageView
+                            style="@style/GoodImageView"
+                            roundiv:left_top_radius="10dp"
+                            roundiv:right_top_radius="10dp"
+                            android:src="@mipmap/g_001"/>
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/goods_001"
-                            android:textSize="20sp"
-                            android:gravity="center"/>
+                            style="@style/GoodTextView"
+                            android:text="@string/g_001" />
                     </LinearLayout>
+                    <!--左右商品的分割线-->
                     <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="215dp"
-                            android:src="@mipmap/good002"/>
+                        style="@style/GoodLinearLayoutR">
+                        <frontend.shoppingmall.CustomRoundAngleImageView
+                            style="@style/GoodImageView"
+                            roundiv:left_top_radius="10dp"
+                            roundiv:right_top_radius="10dp"
+                            android:src="@mipmap/g_002"/>
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="100%不起绒羊毛衫"
-                            android:ellipsize="end"
-                            android:maxLines="1"
-                            android:textSize="20sp"
-                            android:gravity="center"/>
+                            style="@style/GoodTextView"
+                            android:text="@string/g_002" />
                     </LinearLayout>
+                    <!--右-->
                 </LinearLayout>
-                //这是一行商品**向下
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                <!--一行商品结束了-->
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="215dp"
-                            android:src="@mipmap/good003"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="快来买"
-                            android:textSize="20sp"
-                            android:gravity="center"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="215dp"
-                            android:src="@mipmap/good004"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="超厉害剃须刀"
-                            android:ellipsize="end"
-                            android:maxLines="1"
-                            android:textSize="20sp"
-                            android:gravity="center"/>
-                    </LinearLayout>
-                </LinearLayout>
-                //这是一行商品**向上
-                //这是一行商品**向下
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="215dp"
-                            android:src="@mipmap/good003"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="快来买"
-                            android:textSize="20sp"
-                            android:gravity="center"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="215dp"
-                            android:src="@mipmap/good004"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="超厉害剃须刀"
-                            android:ellipsize="end"
-                            android:maxLines="1"
-                            android:textSize="20sp"
-                            android:gravity="center"/>
-                    </LinearLayout>
-                </LinearLayout>
-                //这是一行商品**向上
+                <!--商品内容结束了-->
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
+    <!--主体内容结束了-->
 
+    <!--底部内容开始了-->
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal"
-        android:background="@color/themeColor">
-
-        <ImageView
-            android:id="@+id/toHomePage"
-            android:layout_width="0dp"
-            android:layout_height="47dp"
-            android:layout_weight="1"
-            android:src="@mipmap/pressed" />
-
-        <ImageButton
-            android:id="@+id/toShopPage"
-            android:layout_width="0dp"
-            android:layout_height="47dp"
-            android:layout_weight="1"
-            android:background="#00000000"
-            android:src="@mipmap/normal"/>
-        <ImageButton
-            android:id="@+id/toGoodPage"
-            android:layout_width="0dp"
-            android:layout_height="47dp"
-            android:layout_weight="1"
-            android:background="#00000000"
-            android:src="@mipmap/normal" />
-        <ImageButton
-            android:id="@+id/toSelfPage"
-            android:layout_width="0dp"
-            android:layout_height="47dp"
-            android:layout_weight="1"
-            android:background="#00000000"
-            android:src="@mipmap/normal" />
+        android:background="@color/bottomBar">
 
     </LinearLayout>
+    <!--底部内容结束了-->
 
 </LinearLayout>
-
