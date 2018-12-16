@@ -132,7 +132,70 @@
                     <!--右-->
                 </LinearLayout>
                 <!--一行商品结束了-->
-
+                <!--一行商品开始了-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--左-->
+                    <LinearLayout
+                        style="@style/GoodLinearLayoutL">
+                        <frontend.shoppingmall.CustomRoundAngleImageView
+                            style="@style/GoodImageView"
+                            roundiv:left_top_radius="10dp"
+                            roundiv:right_top_radius="10dp"
+                            android:src="@mipmap/g_003"/>
+                        <TextView
+                            style="@style/GoodTextView"
+                            android:text="@string/g_003" />
+                    </LinearLayout>
+                    <!--左右商品的分割线-->
+                    <LinearLayout
+                        style="@style/GoodLinearLayoutR">
+                        <frontend.shoppingmall.CustomRoundAngleImageView
+                            style="@style/GoodImageView"
+                            roundiv:left_top_radius="10dp"
+                            roundiv:right_top_radius="10dp"
+                            android:src="@mipmap/g_004"/>
+                        <TextView
+                            style="@style/GoodTextView"
+                            android:text="@string/g_004" />
+                    </LinearLayout>
+                    <!--右-->
+                </LinearLayout>
+                <!--一行商品结束了-->
+                <!--一行商品开始了-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--左-->
+                    <LinearLayout
+                        style="@style/GoodLinearLayoutL">
+                        <frontend.shoppingmall.CustomRoundAngleImageView
+                            style="@style/GoodImageView"
+                            roundiv:left_top_radius="10dp"
+                            roundiv:right_top_radius="10dp"
+                            android:src="@mipmap/g_005"/>
+                        <TextView
+                            style="@style/GoodTextView"
+                            android:text="@string/g_005" />
+                    </LinearLayout>
+                    <!--左右商品的分割线-->
+                    <LinearLayout
+                        style="@style/GoodLinearLayoutR">
+                        <frontend.shoppingmall.CustomRoundAngleImageView
+                            style="@style/GoodImageView"
+                            roundiv:left_top_radius="10dp"
+                            roundiv:right_top_radius="10dp"
+                            android:src="@mipmap/g_006"/>
+                        <TextView
+                            style="@style/GoodTextView"
+                            android:text="@string/g_006" />
+                    </LinearLayout>
+                    <!--右-->
+                </LinearLayout>
+                <!--一行商品结束了-->
                 <!--商品内容结束了-->
             </LinearLayout>
         </ScrollView>

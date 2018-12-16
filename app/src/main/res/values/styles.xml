@@ -18,7 +18,7 @@
     </style>
     <style name="GoodImageView">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">175dp</item>
         <item name="android:scaleType">centerCrop</item>
         <!--<item name="roundiv:left_top_radius">10dp</item>-->
         <!--<item name="roundiv:right_top_radius">10dp</item>-->
