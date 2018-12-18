@@ -22,4 +22,16 @@
     <string name="g_020">玻璃小号茶叶罐 陶瓷密封包装罐家用 迷你茶盒装茶叶罐紫砂存茶罐</string>
     <string name="g_021">袋鼠拉杆箱20寸行李箱女万向轮密码箱子旅行箱男学生24寸大容量</string>
     <string name="g_022">igtt旅行箱ins网红行李箱女万向轮20拉杆箱韩版潮男24登机密码箱</string>
+    <string name="shop_001">Nina</string>
+    <string name="shop_002">茉莉和扶苏服装店</string>
+    <string name="shop_003">中信书店</string>
+    <string name="shopMessage_001">[验收提醒]</string>
+    <string name="shopMessage_002">清空购物车！888元红包！速来！</string>
+    <string name="shopMessage_003">专为你推荐！快来看看！</string>
+    <string name="shopTime_001">星期三</string>
+    <string name="shopTime_002">18/12/18</string>
+    <string name="shopTime_003">18/12/12</string>
+    <string name="shops">商家</string>
+    <string name="message">消息</string>
+    <string name="self">个人中心</string>
 </resources>

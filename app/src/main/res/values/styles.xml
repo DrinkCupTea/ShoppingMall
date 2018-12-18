@@ -9,6 +9,8 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
+    <!--主页的style开始-->
     <style name="GoodTextView" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -18,11 +20,11 @@
     </style>
     <style name="GoodImageView">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">175dp</item>
-        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:adjustViewBounds">true</item>
         <!--<item name="roundiv:left_top_radius">10dp</item>-->
         <!--<item name="roundiv:right_top_radius">10dp</item>-->
-
     </style>
     <style name="GoodLinearLayoutL">
         <item name="android:layout_width">0dp</item>
@@ -38,5 +40,63 @@
     <style name="GoodLinearLayoutR" parent="GoodLinearLayoutL">
         <item name="android:layout_marginLeft">3dp</item>
         <item name="android:layout_marginRight">10dp</item>
+    </style>
+    <!--主页的style结束-->
+
+    <!--商家的style开始-->
+    <style name="shopsImageView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+    <style name="shopsFollowButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:src">@drawable/follow</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:background">@drawable/follow_layout</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+    <style name="shopsHead">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+    <style name="shopsName">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">8</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+    <style name="shopsOutline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/good_bar_layout</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <!--商家的style结束-->
+
+    <!--消息的style开始-->
+    <!--消息的style结束-->
+
+    <!--个人中心的style开始-->
+    <!--个人中心的style结束-->
+
+    <style name="bottomBarButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@color/transParent</item>
     </style>
 </resources>

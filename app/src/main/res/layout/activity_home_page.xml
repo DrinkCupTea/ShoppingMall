@@ -9,197 +9,225 @@
     <!--头开始了-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="40dp"
         android:orientation="horizontal"
-        android:background="#595f80">
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@color/themeColor">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:src="@drawable/scan" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="扫一扫"/>
+        </LinearLayout>
         <EditText
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="32dp"
+            android:layout_weight="8"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:hint="银河系漫游指南"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:background="@drawable/head_edit_text"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/more"
             android:layout_weight="1"/>
     </LinearLayout>
     <!--头结束了-->
 
     <!--主体内容开始了-->
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10"
-        android:orientation="vertical">
-        <ScrollView
+        android:layout_weight="10">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--轮播图片开始了-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+                <com.youth.banner.Banner
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/homePageSlide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:image_scale_type="center_crop" />
+            </LinearLayout>
+            <!--轮播图片结束了-->
+
+            <!--八按钮开始了-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/z1"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/z2"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/z3"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/z4"/>
+            </LinearLayout>
+            <!--上下行的分割线-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/che"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/can"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ying"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/you"/>
+            </LinearLayout>
+            <!--八按钮结束了-->
+
+            <!--商品开始-->
+            <!--一行商品开始了-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <!--轮播图片开始了-->
+                android:orientation="horizontal">
+                <!--左-->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@mipmap/temp"
-                        android:scaleType="centerCrop"/>
+                    style="@style/GoodLinearLayoutL">
+                    <frontend.shoppingmall.CustomRoundAngleImageView
+                        style="@style/GoodImageView"
+                        roundiv:left_top_radius="10dp"
+                        roundiv:right_top_radius="10dp"
+                        android:src="@drawable/g_001" />
+                    <TextView
+                        style="@style/GoodTextView"
+                        android:text="@string/g_001" />
                 </LinearLayout>
-                <!--轮播图片结束了-->
-
-                <!--八按钮开始了-->
+                <!--左右商品的分割线-->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:src="@mipmap/z1"/>
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:src="@mipmap/z2"/>
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:src="@mipmap/z3"/>
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:src="@mipmap/z4"/>
+                    style="@style/GoodLinearLayoutR">
+                    <frontend.shoppingmall.CustomRoundAngleImageView
+                        style="@style/GoodImageView"
+                        roundiv:left_top_radius="10dp"
+                        roundiv:right_top_radius="10dp"
+                        android:src="@drawable/g_002"/>
+                    <TextView
+                        style="@style/GoodTextView"
+                        android:text="@string/g_002" />
                 </LinearLayout>
-                <!--上下行的分割线-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:src="@mipmap/che"/>
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:src="@mipmap/can"/>
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:src="@mipmap/ying"/>
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:src="@mipmap/you"/>
-                </LinearLayout>
-                <!--八按钮结束了-->
-
-                <!--商品内容开始了-->
-                <!--一行商品开始了-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <!--左-->
-                    <LinearLayout
-                        style="@style/GoodLinearLayoutL">
-                        <frontend.shoppingmall.CustomRoundAngleImageView
-                            style="@style/GoodImageView"
-                            roundiv:left_top_radius="10dp"
-                            roundiv:right_top_radius="10dp"
-                            android:src="@mipmap/g_001"/>
-                        <TextView
-                            style="@style/GoodTextView"
-                            android:text="@string/g_001" />
-                    </LinearLayout>
-                    <!--左右商品的分割线-->
-                    <LinearLayout
-                        style="@style/GoodLinearLayoutR">
-                        <frontend.shoppingmall.CustomRoundAngleImageView
-                            style="@style/GoodImageView"
-                            roundiv:left_top_radius="10dp"
-                            roundiv:right_top_radius="10dp"
-                            android:src="@mipmap/g_002"/>
-                        <TextView
-                            style="@style/GoodTextView"
-                            android:text="@string/g_002" />
-                    </LinearLayout>
-                    <!--右-->
-                </LinearLayout>
-                <!--一行商品结束了-->
-                <!--一行商品开始了-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <!--左-->
-                    <LinearLayout
-                        style="@style/GoodLinearLayoutL">
-                        <frontend.shoppingmall.CustomRoundAngleImageView
-                            style="@style/GoodImageView"
-                            roundiv:left_top_radius="10dp"
-                            roundiv:right_top_radius="10dp"
-                            android:src="@mipmap/g_003"/>
-                        <TextView
-                            style="@style/GoodTextView"
-                            android:text="@string/g_003" />
-                    </LinearLayout>
-                    <!--左右商品的分割线-->
-                    <LinearLayout
-                        style="@style/GoodLinearLayoutR">
-                        <frontend.shoppingmall.CustomRoundAngleImageView
-                            style="@style/GoodImageView"
-                            roundiv:left_top_radius="10dp"
-                            roundiv:right_top_radius="10dp"
-                            android:src="@mipmap/g_004"/>
-                        <TextView
-                            style="@style/GoodTextView"
-                            android:text="@string/g_004" />
-                    </LinearLayout>
-                    <!--右-->
-                </LinearLayout>
-                <!--一行商品结束了-->
-                <!--一行商品开始了-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <!--左-->
-                    <LinearLayout
-                        style="@style/GoodLinearLayoutL">
-                        <frontend.shoppingmall.CustomRoundAngleImageView
-                            style="@style/GoodImageView"
-                            roundiv:left_top_radius="10dp"
-                            roundiv:right_top_radius="10dp"
-                            android:src="@mipmap/g_005"/>
-                        <TextView
-                            style="@style/GoodTextView"
-                            android:text="@string/g_005" />
-                    </LinearLayout>
-                    <!--左右商品的分割线-->
-                    <LinearLayout
-                        style="@style/GoodLinearLayoutR">
-                        <frontend.shoppingmall.CustomRoundAngleImageView
-                            style="@style/GoodImageView"
-                            roundiv:left_top_radius="10dp"
-                            roundiv:right_top_radius="10dp"
-                            android:src="@mipmap/g_006"/>
-                        <TextView
-                            style="@style/GoodTextView"
-                            android:text="@string/g_006" />
-                    </LinearLayout>
-                    <!--右-->
-                </LinearLayout>
-                <!--一行商品结束了-->
-                <!--商品内容结束了-->
+                <!--右-->
             </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
+            <!--一行商品结束了-->
+            <!--一行商品开始了-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--左-->
+                <LinearLayout
+                    style="@style/GoodLinearLayoutL">
+                    <frontend.shoppingmall.CustomRoundAngleImageView
+                        style="@style/GoodImageView"
+                        roundiv:left_top_radius="10dp"
+                        roundiv:right_top_radius="10dp"
+                        android:src="@drawable/g_003"/>
+                    <TextView
+                        style="@style/GoodTextView"
+                        android:text="@string/g_003" />
+                </LinearLayout>
+                <!--左右商品的分割线-->
+                <LinearLayout
+                    style="@style/GoodLinearLayoutR">
+                    <frontend.shoppingmall.CustomRoundAngleImageView
+                        style="@style/GoodImageView"
+                        roundiv:left_top_radius="10dp"
+                        roundiv:right_top_radius="10dp"
+                        android:src="@drawable/g_004"/>
+                    <TextView
+                        style="@style/GoodTextView"
+                        android:text="@string/g_004" />
+                </LinearLayout>
+                <!--右-->
+            </LinearLayout>
+            <!--一行商品结束了-->
+            <!--一行商品开始了-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--左-->
+                <LinearLayout
+                    style="@style/GoodLinearLayoutL">
+                    <frontend.shoppingmall.CustomRoundAngleImageView
+                        style="@style/GoodImageView"
+                        roundiv:left_top_radius="10dp"
+                        roundiv:right_top_radius="10dp"
+                        android:src="@drawable/g_005"/>
+                    <TextView
+                        style="@style/GoodTextView"
+                        android:text="@string/g_005" />
+                </LinearLayout>
+                <!--左右商品的分割线-->
+                <LinearLayout
+                    style="@style/GoodLinearLayoutR">
+                    <frontend.shoppingmall.CustomRoundAngleImageView
+                        style="@style/GoodImageView"
+                        roundiv:left_top_radius="10dp"
+                        roundiv:right_top_radius="10dp"
+                        android:src="@drawable/g_006"/>
+                    <TextView
+                        style="@style/GoodTextView"
+                        android:text="@string/g_006" />
+                </LinearLayout>
+                <!--右-->
+            </LinearLayout>
+            <!--一行商品结束了-->
+            <!--商品结束-->
+
+        </LinearLayout>
+    </ScrollView>
     <!--主体内容结束了-->
 
     <!--底部内容开始了-->
@@ -209,7 +237,21 @@
         android:layout_weight="1"
         android:orientation="horizontal"
         android:background="@color/bottomBar">
-
+        <ImageButton
+            android:src="@drawable/home_on_press"
+            style="@style/bottomBarButton"/>
+        <ImageButton
+            android:id="@+id/homeToShop"
+            android:src="@drawable/shop_normal"
+            style="@style/bottomBarButton"/>
+        <ImageButton
+            android:id="@+id/homeToMessage"
+            android:src="@drawable/message_normal"
+            style="@style/bottomBarButton"/>
+        <ImageButton
+            android:id="@+id/homeToSelf"
+            android:src="@drawable/self_normal"
+            style="@style/bottomBarButton"/>
     </LinearLayout>
     <!--底部内容结束了-->
 
