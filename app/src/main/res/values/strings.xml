@@ -31,6 +31,12 @@
     <string name="shopTime_001">星期三</string>
     <string name="shopTime_002">18/12/18</string>
     <string name="shopTime_003">18/12/12</string>
+    <string name="homeSearchBarHint">银河系漫游指南</string>
+    <string name="set_001">我的钱包</string>
+    <string name="set_002">我的收藏</string>
+    <string name="set_003">我的卡券</string>
+    <string name="set_004">人脸信息</string>
+    <string name="set_005">关于我们</string>
     <string name="shops">商家</string>
     <string name="message">消息</string>
     <string name="self">个人中心</string>

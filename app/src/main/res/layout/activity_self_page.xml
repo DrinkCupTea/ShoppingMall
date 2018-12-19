@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/bgcolor">
     <!--头开始-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,11 +11,12 @@
         android:background="@color/themeColor"
         android:orientation="horizontal">
         <ImageView
+            android:layout_margin="5dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:adjustViewBounds="true"
-            android:scaleType="fitXY"/>
+            android:src="@drawable/note" />
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -26,11 +28,12 @@
             android:layout_margin="2dp"
             android:textColor="@color/white"/>
         <ImageView
+            android:layout_margin="5dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:adjustViewBounds="true"
-            android:scaleType="fitXY"/>
+            android:src="@drawable/setting"/>
     </LinearLayout>
     <!--头结束-->
 
@@ -53,13 +56,75 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:scaleType="centerCrop"/>
+                    android:layout_marginTop="10dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/head_pic"/>
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    style="@style/settingLinearLayout">
+                    <ImageView
+                        style="@style/settingImage"
+                        android:src="@drawable/wallet"/>
+                    <TextView
+                        style="@style/settingText"
+                        android:text="@string/set_001"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/settingLinearLayout">
+                    <ImageView
+                        style="@style/settingImage"
+                        android:src="@drawable/collect"/>
+                    <TextView
+                        style="@style/settingText"
+                        android:text="@string/set_002"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/settingLinearLayout">
+                    <ImageView
+                        style="@style/settingImage"
+                        android:src="@drawable/card"/>
+                    <TextView
+                        style="@style/settingText"
+                        android:text="@string/set_003"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/settingLinearLayout">
+                    <ImageView
+                        style="@style/settingImage"
+                        android:src="@drawable/face"/>
+                    <TextView
+                        style="@style/settingText"
+                        android:text="@string/set_004"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/settingLinearLayout">
+                    <ImageView
+                        style="@style/settingImage"
+                        android:src="@drawable/us"/>
+                    <TextView
+                        style="@style/settingText"
+                        android:text="@string/set_005"/>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/logOut"
+                    android:background="@drawable/self_page_button"
+                    android:text="退出登录"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:layout_width="200dp"
+                    android:layout_height="70dp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -33,21 +33,33 @@
                 android:text="扫一扫"/>
         </LinearLayout>
         <EditText
+            android:id="@+id/homeSearchBar"
             android:layout_width="0dp"
             android:layout_height="32dp"
             android:layout_weight="8"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:hint="银河系漫游指南"
+            android:hint="@string/homeSearchBarHint"
             android:textCursorDrawable="@drawable/color_cursor"
             android:background="@drawable/head_edit_text"/>
-        <ImageView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="32dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:src="@drawable/more"
-            android:layout_weight="1"/>
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:src="@drawable/qr_code" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="会员码"/>
+        </LinearLayout>
     </LinearLayout>
     <!--头结束了-->
 

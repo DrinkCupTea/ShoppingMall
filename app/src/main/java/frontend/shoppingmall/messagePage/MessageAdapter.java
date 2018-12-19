@@ -1,7 +1,6 @@
 package frontend.shoppingmall.messagePage;
 
 import android.content.Context;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 import java.util.List;
 
 import frontend.shoppingmall.R;
-import frontend.shoppingmall.messagePage.Contacts;
 
 public class MessageAdapter extends ArrayAdapter {
     private final int resourceId;

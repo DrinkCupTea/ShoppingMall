@@ -19,7 +19,8 @@
         <activity android:name=".goodsPage.GoodsPageActivity" />
         <activity android:name=".shopsPage.ShopsPageActivity" />
         <activity android:name=".messagePage.MessaegPageActivity" />
-        <activity android:name=".selfPage.SelfPageActivity"></activity>
+        <activity android:name=".selfPage.SelfPageActivity" />
+        <activity android:name=".logInPage.LogInPageActivity"></activity>
     </application>
 
 </manifest>
