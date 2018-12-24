@@ -60,6 +60,8 @@ public class SelfPageActivity extends AppCompatActivity {
                     break;
             }
             startActivity(intent);
+            overridePendingTransition(0, 0);
+            SelfPageActivity.this.finish();
         }
     }
 
@@ -72,5 +74,10 @@ public class SelfPageActivity extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent(SelfPageActivity.this,HomePageActivity.class);
         startActivity(intent);
+    }
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(0, 0);
     }
 }

@@ -50,7 +50,7 @@ public class MessaegPageActivity extends AppCompatActivity {
         toShop.setOnClickListener(onClick);
         toSelf.setOnClickListener(onClick);
     }
-    class OnClick implements View.OnClickListener{
+    public  class OnClick implements View.OnClickListener{
         @Override
         public void onClick(View v) {
             Intent intent = null;
@@ -66,6 +66,8 @@ public class MessaegPageActivity extends AppCompatActivity {
                     break;
             }
             startActivity(intent);
+            overridePendingTransition(0, 0);
+            MessaegPageActivity.this.finish();
         }
     }
 
@@ -73,5 +75,10 @@ public class MessaegPageActivity extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent(MessaegPageActivity.this,HomePageActivity.class);
         startActivity(intent);
+    }
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(0, 0);
     }
 }

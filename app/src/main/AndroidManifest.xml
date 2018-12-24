@@ -9,17 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".homePage.HomePageActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".goodsPage.GoodsPageActivity" />
+        <activity android:name=".homePage.HomePageActivity" />
         <activity android:name=".shopsPage.ShopsPageActivity" />
         <activity android:name=".messagePage.MessaegPageActivity" />
         <activity android:name=".selfPage.SelfPageActivity" />
+        <activity android:name=".guidePage.GuideActivity" />
+        <activity android:name=".cinemaPage.CinemaActivity" />
+        <activity android:name=".cinemaPage.CinemaSeatActivity" />
+        <!-- <activity android:name=".StarActivity" /> -->
+
+        <activity android:name=".ScanActivity" />
+        <activity android:name=".childPage.ChildActivity" />
+        <activity android:name=".parkingPage.ParkingActivity" />
+        <activity android:name=".parkingPage.ParkingHomeActivity" />
+        <activity android:name=".diningPage.DiningRoomActivity" />
+        <activity android:name=".diningPage.DiningSeatActivity" />
+        <activity android:name=".LaunchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".logInPage.LogInPageActivity"></activity>
     </application>
 

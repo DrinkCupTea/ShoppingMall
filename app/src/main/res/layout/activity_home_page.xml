@@ -34,14 +34,18 @@
         </LinearLayout>
         <EditText
             android:id="@+id/homeSearchBar"
+            android:drawableLeft="@drawable/search_icon"
             android:layout_width="0dp"
             android:layout_height="32dp"
             android:layout_weight="8"
+            android:drawablePadding="6dp"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:hint="@string/homeSearchBarHint"
             android:textCursorDrawable="@drawable/color_cursor"
-            android:background="@drawable/head_edit_text"/>
+            android:background="@drawable/head_edit_text"
+            android:maxLines="1"
+            android:inputType="text"/>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="32dp"
@@ -75,7 +79,7 @@
             <!--轮播图片开始了-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp">
+                android:layout_height="220dp">
                 <com.youth.banner.Banner
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/homePageSlide"
@@ -88,54 +92,27 @@
             <!--八按钮开始了-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="120dp"
                 android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/z1"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/z2"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/z3"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/z4"/>
-            </LinearLayout>
-            <!--上下行的分割线-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/che"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/can"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/ying"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/you"/>
+                <ImageButton
+                    android:id="@+id/btn_home_parking"
+                    android:src="@drawable/parking_button"
+                    style="@style/homePageButton"/>
+                <ImageButton
+                    android:id="@+id/btn_home_dining"
+                    android:src="@drawable/restaurant_button"
+                    style="@style/homePageButton" />
+                <ImageButton
+                    android:id="@+id/btn_home_cinema"
+                    android:src="@drawable/movie_button"
+                    style="@style/homePageButton"/>
+                <ImageButton
+                    android:id="@+id/btn_home_child"
+                    android:src="@drawable/child_button"
+                    style="@style/homePageButton"/>
+                <ImageButton
+                    android:src="@drawable/money_button"
+                    style="@style/homePageButton"/>
             </LinearLayout>
             <!--八按钮结束了-->
 

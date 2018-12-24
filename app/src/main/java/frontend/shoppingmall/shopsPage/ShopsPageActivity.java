@@ -47,6 +47,7 @@ public class ShopsPageActivity extends AppCompatActivity {
                     break;
             }
             startActivity(intent);
+            overridePendingTransition(0, 0);
         }
     }
 
@@ -54,5 +55,10 @@ public class ShopsPageActivity extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent(ShopsPageActivity.this,HomePageActivity.class);
         startActivity(intent);
+    }
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(0, 0);
     }
 }
