@@ -1,2 +1,2 @@
 # ShoppingMall
-exercises abouut android.
+exercises about android.
